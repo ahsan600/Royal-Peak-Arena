@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-primary: #000000; /* Black */
+  --color-brand-secondary: #000000; /* Black */
+  --color-brand-accent: #404040; /* Dark gray */
+  --color-brand-bg: #ffffff; /* Pure white */
+  --color-brand-surface: #f8fafc; /* Very light gray */
+  --color-brand-text: #0f172a; /* Near black text */
+  --color-brand-muted: #64748b; /* Muted gray text */
+}
+
+:root {
+  --background: var(--color-brand-bg);
+  --foreground: var(--color-brand-text);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+@layer utilities {
+  .glass-effect {
+    @apply bg-brand-surface/90 backdrop-blur-md border border-brand-text/10 shadow-lg;
+  }
+  .text-gradient {
+    @apply bg-gradient-to-r from-brand-secondary to-brand-accent bg-clip-text;
+    color: transparent !important;
+  }
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
+
+/* Force light text on dark brand backgrounds (overrides text-brand-text) */
+.bg-brand-secondary,
+.from-brand-secondary,
+.bg-brand-secondary .text-brand-text,
+.from-brand-secondary .text-brand-text {
+  color: #ffffff !important;
+}
+
+/* Ensure SVGs inherit the white color when inside these buttons */
+.bg-brand-secondary svg,
+.from-brand-secondary svg {
+  color: #ffffff !important;
+}
