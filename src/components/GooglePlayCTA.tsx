@@ -14,7 +14,7 @@ export default function GooglePlayCTA() {
           </p>
           
           <a
-            href={process.env.NEXT_PUBLIC_GOOGLE_PLAY_URL || "#"}
+            href={process.env.NEXT_PUBLIC_GOOGLE_PLAY_URL || "https://play.google.com/store/apps/developer?id=Royal+Peak+Arena"}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 bg-brand-text text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-brand-text/90 hover:scale-105 transition-all duration-300 shadow-xl shadow-brand-text/20"

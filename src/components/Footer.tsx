@@ -40,7 +40,7 @@ export default function Footer() {
               </li>
               <li className="pt-2">
                 <a 
-                  href={process.env.NEXT_PUBLIC_GOOGLE_PLAY_URL || "#"} 
+                  href={process.env.NEXT_PUBLIC_GOOGLE_PLAY_URL || "https://play.google.com/store/apps/developer?id=Royal+Peak+Arena"} 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-brand-secondary hover:text-brand-text transition-colors"

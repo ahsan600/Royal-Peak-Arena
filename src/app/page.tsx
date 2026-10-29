@@ -46,7 +46,7 @@ export default function Home() {
               Explore Our Games
             </Link>
             <a
-              href={process.env.NEXT_PUBLIC_GOOGLE_PLAY_URL || "#"}
+              href={process.env.NEXT_PUBLIC_GOOGLE_PLAY_URL || "https://play.google.com/store/apps/developer?id=Royal+Peak+Arena"}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto px-8 py-4 rounded-xl border-2 border-brand-text text-brand-text bg-transparent font-bold text-lg hover:bg-brand-text hover:text-white transition-all hover:-translate-y-1"
